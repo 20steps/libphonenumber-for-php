@@ -1536,6 +1536,9 @@ class PhoneNumberUtil
             );
         }
 
+        if ($defaultRegion == 'ZZ') {
+        	$defaultRegion = 'DE';
+        }
         // Check the region supplied is valid, or that the extracted number starts with some sort of +
         // sign so the number's region can be determined.
         if ($checkRegion && !$this->checkRegionForParsing($nationalNumber, $defaultRegion)) {
